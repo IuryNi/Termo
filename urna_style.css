@@ -1,0 +1,165 @@
+/* Configurações Globais */
+* {
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Corpo Principal da Urna */
+.urna {
+    background-color: #dbdbdb;
+    border: 4px solid #b5b5b5;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+    max-width: 850px;
+    width: 100%;
+}
+
+/* Área da Tela (Lado Esquerdo) */
+.tela-container {
+    flex: 1.3;
+    background-color: #fff;
+    border: 2px solid #555;
+    padding: 20px;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.tela-topo {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tela-cargo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+/* Input do Número do Candidato na Tela */
+.urna-input-numero {
+    font-size: 42px;
+    font-weight: bold;
+    border: 1px solid #333;
+    width: 100%;
+    padding: 10px;
+    letter-spacing: 8px;
+    text-align: center;
+    background: #fcfcfc;
+    pointer-events: none; /* Impede digitação direta pelo teclado físico */
+}
+
+/* Área do Teclado (Lado Direito) */
+.teclado-container {
+    flex: 1;
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.8);
+}
+
+/* Grid Numérico */
+.teclado-numerico {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 20px;
+    justify-items: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+/* Botões Numéricos */
+.btn-num {
+    background: linear-gradient(135deg, #333 0%, #111 100%);
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    border: none;
+    width: 65px;
+    height: 50px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 4px 0px #000, 2px 5px 5px rgba(0,0,0,0.5);
+    transition: all 0.1s ease;
+}
+
+.btn-num:active {
+    transform: translateY(4px);
+    box-shadow: 0px 0px 0px #000;
+}
+
+/* Linha do botão 0 */
+.linha-zero {
+    grid-column: 2;
+}
+
+/* Botões de Ação Inferiores (Branco, Corrige, Confirma) */
+.teclado-acoes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.btn-acao {
+    flex: 1;
+    height: 55px;
+    border: none;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 8px;
+    box-shadow: 0px 4px 0px rgba(0,0,0,0.4);
+    transition: all 0.1s ease;
+}
+
+.btn-acao:active {
+    transform: translateY(4px);
+    box-shadow: 0px 0px 0px #000;
+}
+
+/* Cores específicas das ações */
+.btn-branco {
+    background-color: #ffffff;
+    color: #000;
+    padding-top: 25px;
+}
+
+.btn-corrige {
+    background-color: #f05d23;
+    color: #000;
+}
+
+.btn-confirma {
+    background-color: #00b359;
+    color: #000;
+    height: 65px; /* Botão confirma é tradicionalmente maior */
+    align-self: flex-end;
+}
